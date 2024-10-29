@@ -2,13 +2,10 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
-
-  const { loginUser } = useContext(UserContext);
 
   const handleClick = () => {
     btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
@@ -48,7 +45,6 @@ const Header = () => {
         >
           {btnName}
         </button>
-        <li className="font-bold">{loginUser}</li>
       </ul>
     </div>
   );
