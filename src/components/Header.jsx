@@ -43,7 +43,7 @@ const Header = () => {
           className="bg-blue-300 px-5 py-2 m-0 rounded-lg"
           onClick={handleClick}
         >
-          {btnName}
+          <Link to="/login">{btnName}</Link>
         </button>
       </ul>
     </div>
